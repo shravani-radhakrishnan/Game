@@ -3,7 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: 'home', loadChildren: () => import('./shared/components/home/home.module').then( m => m.HomePageModule)},
+  { path: 'levels',loadChildren: () => import('./shared/components/levels/levels.module').then( m => m.LevelsPageModule)},
+  {
+    path: 'guess',
+    loadChildren: () => import('./shared/components/guess/guess.module').then( m => m.GuessPageModule)
+  },
 ];
 
 @NgModule({

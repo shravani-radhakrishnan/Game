@@ -1,0 +1,5 @@
+<ion-grid style="height: 100%" class="center" >
+  <ion-row  *ngFor="let level of levelOptions">
+    <ion-button routerLink="/levels" (click)="startGame(level)" class="levelBtns"> {{level}}</ion-button>
+  </ion-row>
+</ion-grid>
